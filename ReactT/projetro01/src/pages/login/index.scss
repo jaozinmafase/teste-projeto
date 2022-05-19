@@ -1,0 +1,62 @@
+.page-login{
+  
+
+      .body{
+          height: 100vh;
+          width: 100%;
+          font-family: Arial, Helvetica, sans-serif;
+          background-image: linear-gradient(100deg, rgb(63, 243, 243), rgb(31, 77, 230));
+  
+      }
+        .div1{
+            background-color: rgba(0, 0, 0, 0.9);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 80px;
+            border-radius: 20px;
+            color: white;
+        }
+        input{
+          
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+        .button{
+            background-color: dodgerblue;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            color:white;
+            font-size: 15px;
+        }
+        button:hover{
+            background-color: deepskyblue;
+            cursor: pointer;
+        }
+
+
+
+     .button2{
+        background-color: rgb(3, 8, 247);
+        border: none;
+        padding: 15px;
+        border-radius: 15px;
+        font-size: 15px;
+     }
+     .button2:hover{
+        background-color: rgb(94, 109, 247);
+     }
+
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    
+    
+}

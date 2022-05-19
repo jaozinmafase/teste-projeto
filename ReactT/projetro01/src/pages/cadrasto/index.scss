@@ -1,0 +1,115 @@
+.page-cadrastro{
+    *{
+        margin: 0px;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .formulario1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .formulario2{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-self: end;
+        align-items: center;
+      
+    
+    }
+    .formulario3{
+        display: flex;
+        flex-direction: column;
+        margin-top: 3em;
+    }
+    .cadrasto1{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cadrasto2{
+        display: flex;
+        flex-direction: column;
+    }
+    .cabecalho{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: #1C2855;
+        padding: 15px;
+    }
+    h1{
+        font-size: 30px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+    h2{
+        font-size: 25px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+    .c1{
+        height: 7em;
+        width: 60em;
+        resize: none;
+    }
+    .x2{
+        margin-top: 4em;
+        display: flex;
+        justify-content: center;
+    }
+    button{
+        padding: 15px 20px;
+        border-radius: 15px;
+        text-align: center;
+        border: none;
+        background-color: rgb(233, 129, 10);
+        color: white;
+        align-items: center;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color: rgb(253, 162, 57);
+        color: white;
+    }
+    
+    
+    
+    
+    
+    
+    .tagA{
+        color: #FF6828;
+        font-size: 24px;
+    }
+    
+    
+    
+    
+    
+    .botao{
+       
+        align-items: center;
+        justify-content: center;
+        background-color: #FF6828;
+        color: black;
+        border: none;
+        border-radius: 15px;
+        margin-top: 15px;
+        padding: 10px;
+        
+    
+    
+    
+    }
+    
+    .botao:hover{
+        background-color: #fa8d5e;
+        cursor: pointer;
+    }
+    
+}
+ 

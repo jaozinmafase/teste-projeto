@@ -1,0 +1,448 @@
+.page-home{
+    .k{
+        margin-top: 1.5em;
+        margin-left: 0.5em;
+        color: rgb(10, 10, 10);
+    }
+    
+    
+    
+    .containermae{
+        display: flex;
+        flex-direction: column;
+        
+       
+    }
+    .footer{
+        display: flex;
+        flex-direction:row ;
+       background-color: rgb(68, 67, 67);
+       height: 60vh;
+       justify-content: space-around;
+    }
+    .f{
+        display: flex;
+        flex-direction: row;
+       
+    }
+    .f1{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .f2{
+        margin-left: 1em;
+    }
+    .container1{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background-image: url(../../../public/image/20471179.jpg);
+        background-attachment: fixed;
+        background-position: right;
+        
+       
+    
+    }
+    .container2{
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        
+        
+        
+       
+    
+    }
+    .container3{
+        display: flex;
+        flex-direction: column;
+        
+    
+    }
+    .subcontainer1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    
+    
+    .subcontainer2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .subcontainerx{
+        margin-top: 4EM;
+        display: flex;
+        flex-direction: row;
+        justify-content:start;
+        margin-left: 3em;
+    }
+    .subcontainerx1{
+        margin-top: 1EM;
+        display: flex;
+        flex-direction: row;
+        justify-content:start;
+        margin-left: 3em;
+    }
+    
+    .subcontainer3{
+        margin-top: 10em;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      
+    }
+    .sub{
+        display: flex;
+        flex-direction: column;
+        background-color:  #D7C5FF;
+        text-align: center;
+      
+    }
+    
+    .subcontainer4{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 1em;
+      text-align: center;
+    }
+    
+    .sub5{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .v1{
+        text-align: center;
+    }
+    .v2{
+        margin-top: 6em;
+        text-align: center;
+    }
+    .v3{
+    display: flex;
+     flex-direction: row;
+     text-align: center;
+    }
+    .v5{
+        margin-top: 8em;
+    }
+    .v6{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color:  #D7C5FF;
+        text-align: center;
+        margin-top: 3em;
+    
+    }
+    .v7{
+        margin-top: 3em;
+    }
+    .v8{display: flex;
+     flex-direction: row;
+     text-align: center;
+     justify-content: space-evenly;
+    }
+    
+    
+    
+    .img1{
+        height: 100px;
+        width: 100px;
+        border-radius: 70px;
+        
+    }
+    
+    .imgc{
+        height: 70px;
+        width: 70px;
+        border-radius: 70px;
+        
+    }
+    
+    
+    
+    
+    
+    .img2{
+        height: 455px;
+         width: 455px;
+    
+    
+    }
+    .img3{
+        height: 500px;
+         width: 500px;
+    
+    
+    }
+    .img4{
+        height: 455px;
+         width: 455px;
+    
+    
+    }
+    
+    .b1{
+        padding: 12px 20px;
+        border-radius: 30px;
+        border: none;
+        background-color: rgb(212, 163, 245);
+        margin-top: 1em;
+       
+    }
+    .b1:hover{
+        cursor: pointer;
+        background-color: rgb(218, 177, 245);
+    
+        padding:13px 21px ;
+       
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    
+    .card{
+        width: 300px;
+        height: 510px;
+        background-color: #C7A5FE;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px rgba(114, 113, 113, 0.7);
+        transition:  background-color 1s;
+    }
+    .cardx{
+        width: 300px;
+        height: 510px;
+        background-color: #C7A5FE;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px rgba(114, 113, 113, 0.7);
+        transition:  background-color 1s;
+    }
+    
+    .card:hover{
+        width: 300px;
+        height: 500px;
+        background-color: #4b10aa;
+       padding: 5px 5px;
+       color: beige;
+       
+    }
+    .cardx:hover{
+        width: 300px;
+        height: 500px;
+        background-color: #4b10aa;
+       padding: 5px 5px;
+       color: beige;
+    }
+    .imgcard{
+        height: 257px;
+        width: 301px;
+    
+    
+    }
+    
+    .content{
+        display: flex;
+       
+    
+    }
+    
+    .c{
+        margin-top: 5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .a{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .containerx{
+        margin-top: 5em;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: #f4f5c7 ;
+    }
+    .imgx{
+        height: 600px;
+        width: 600px;
+       
+    }
+    .buttomText{
+        font-family: 'discord5';
+        line-height: 3px;
+    }
+    .ax{
+        color: rgb(203, 243, 166);
+    }
+    h3{
+        font-family: 'discord1';
+        line-height: 3px;
+        font-size: 60px;
+        color: rgb(5, 5, 5);
+    }
+    
+    p{
+        font-family: 'discord5';
+        line-height: 3px;
+        font-size: 20px;
+    }
+    
+    h1{
+        font-family: 'discord5';
+        line-height: 3px;
+        font-size: 30px;
+        
+    
+    }
+    h2{
+        font-family: 'discord5';
+        
+        font-size: 25px;
+    }
+    
+    
+    span{
+        font-family: 'discord5';
+    }
+    
+    @media(max-width:440px)
+{
+     footer{
+         display: flex;
+         flex-direction: row;
+     }
+     .v5{
+         margin-right: 10px;
+     }
+     .v8{
+         display: flex;
+         flex-direction: column;
+     }
+    .k{
+        margin-top: 1em;
+        margin-left: 3px;
+        color: white;
+    }
+    .subcontainer4{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .sub{
+        display: flex;
+        flex-direction: column;
+
+    }
+     .v6{
+        display: flex;
+        flex-direction: column;
+
+     }
+
+    h3{
+        color: rgb(253, 253, 253);
+        font-size: 30px;
+    }  
+    h1{
+        font-size: 22px;
+        line-height: 30px;
+    }
+    p{
+        line-height: 10px;
+       font-size: 15px;
+
+    }
+    .img1{
+        height: 79px;
+      width: 80px;
+     border-radius: 199px;
+
+    }
+    .img2{
+        height: 255px;
+         width: 255px;
+    
+    
+    }
+    .img3{
+        height: 300px;
+         width: 300px;
+    
+    
+    }
+    .img4{
+        height: 255px;
+         width: 255px;
+    
+    
+    }
+    .imgx{
+        height: 400px;
+        width: 300px;
+       
+    }
+    .imgc{
+        height: 30px;
+        width: 30px;
+        border-radius: 70px;
+        
+    }
+    .card{
+        margin-top: 2em;
+    }
+    .cardx{
+        margin-top: 2em;
+    }
+ 
+    .c{
+        display: flex;
+        flex-direction: column;
+       justify-content: center;
+    }
+ 
+     .a{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+
+}
+
+
+   
+    
+}
+@font-face {
+    font-family: 'discord1';
+   src: url('../../../public/fontes/1cce82154216dc3cb04a84d011ce1201.woff2');
+}
+ 
+@font-face {
+    font-family: 'discord3';
+    src: url('../../../public/fontes/3bdef1251a424500c1b3a78dea9b7e57.woff');
+}
+ 
+@font-face {
+    font-family: 'discord4';
+    src: url('../../../public/fontes/ae7c84783ad48b6d1c8e2bfbe707e0d4.woff2');
+}
+@font-face {
+    font-family: 'discord5';
+    src: url('../../../public/fontes/be0060dafb7a0e31d2a1ca17c0708636.woff');
+}
+ 
+
+
