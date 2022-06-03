@@ -65,3 +65,5 @@ SELECT id_prontuario	        id,
        ds_proximas_sessoes      proximas sessões
   FROM tb_prontuario_paciente
  WHERE nm_paciente			like '%a%';
+
+ 
