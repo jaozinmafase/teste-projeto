@@ -5,9 +5,6 @@ use bancopsicoDB;
 INSERT INTO tb_funcionario (nm_funcionario, nm_login, ds_senha)
      VALUES ('admin', 'admin@admin.com.br', '1234');
 
-
-
-
 -- CSU01:: efetuar login
 select
 id_funcionario        id,             
@@ -33,7 +30,7 @@ ds_telefone,                dt_consulta,
 ds_queixa_principal,        ds_outras_queixas,
 ds_anamnese,                ds_hipotese,
 bt_tem_trat_ant,            bt_usa_medic,
-bt_trat_ant,                ds_medic_utili,
+ds_trat_ant,                ds_medic_utili,
 ds_diagnostico,                ds_metas_alcancadas,
 ds_sessoes_realizadas,        ds_proximas_sessoes
 )
@@ -43,7 +40,33 @@ value (
 'Hipotese dele ser muito irritante', 0, 0,'nenhum','nada','Ele é chato por natureza','nenhuma, ele é um caso perdido', 'todas', 'mais nenhuma por favor');
 
 -- CSU03:: remover paciente
+DELETE FROM tb_prontuario_paciente 
+       WHERE id_prontuario = 1;
 
 -- CSU04:: alteraro registro de um paciente
 
+UPDATE tb_prontuario_paciente 
+   SET nm_paciente      = 'Matheus',     
+dt_nascimento = '2006-05-20',
+ds_cep = '421412342',                        ds_endereco = 'av.dr.luiz',
+ds_telefone = '1197220',                     dt_consulta = '2022-06-03',
+ds_queixa_principal = 'não da tempo',        ds_outras_queixas = 'não tem',
+ds_anamnese = 'não da tempo',                ds_hipotese = ' complicado',
+bt_tem_trat_ant = false,                     bt_usa_medic = false,
+ds_trat_ant = false,                         ds_medic_utili = '',
+ds_diagnostico = ' Muito trabalhador',       ds_metas_alcancadas = 'até o marco 6',
+ds_sessoes_realizadas = '2022-05-27',        ds_proximas_sessoes = '2022-06-10'
+ WHERE id_prontuario = 1;
+
 -- CSU05:: pesquisar por um paciente
+
+SELECT id_prontuario	        id,
+	  nm_paciente			    nome,
+       ds_telefone		        telefone,
+       ds_queixa_principal	    queixa,
+       ds_diagnostico	        ds_diagnostico
+       ds_proximas_sessoes      proximas sessões
+  FROM tb_prontuario_paciente
+ WHERE nm_paciente			like '%a%';
+ 
+
