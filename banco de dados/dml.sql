@@ -1,5 +1,16 @@
 se bancopsicoDB;
 
+
+-- carga inicial usuÃ¡rio admin
+INSERT INTO tb_usuario (nm_usuario, ds_email, ds_senha)
+     VALUES ('admin', 'admin@admin.com.br', '1234');
+
+
+
+
+-- CSU01:: efetuar login
+
+-- CSU02:: cadastrar novo paciente
 insert into  tb_prontuario_paciente(
 
 id_funcionario,
