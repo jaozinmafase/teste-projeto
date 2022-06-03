@@ -1,6 +1,5 @@
 use bancopsicoDB;
 
-
 -- carga inicial usuario admin
 INSERT INTO tb_funcionario (nm_funcionario, nm_login, ds_senha)
      VALUES ('admin', 'admin@admin.com.br', '1234');
@@ -16,9 +15,7 @@ from tb_funcionario
 where ds_login 		= 'admin@admin.com.br'
 and ds_senha		= '1234';;
 
-
 value('Marquinhos', 839749432,'Marqn','mar0202');
-
 
 -- CSU02:: registrar um novo paciente
 insert into  tb_prontuario_paciente(
@@ -68,5 +65,3 @@ SELECT id_prontuario	        id,
        ds_proximas_sessoes      proximas sessões
   FROM tb_prontuario_paciente
  WHERE nm_paciente			like '%a%';
- 
-

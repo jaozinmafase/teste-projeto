@@ -2,7 +2,6 @@ create database bancopsicoDB;
 
 use bancopsicoDB;
 
-
 create table tb_funcionario(
 
 id_funcionario                int primary key auto_increment,
