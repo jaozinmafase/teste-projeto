@@ -7,5 +7,4 @@ password: process.env.MYSQL_PWD,
 database: process.env.MYSQL_DB
 })
 
-console.log('DB conectado !!!')
 export {con}

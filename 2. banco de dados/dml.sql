@@ -6,14 +6,12 @@ INSERT INTO tb_funcionario (nm_funcionario, nm_login, ds_senha)
 
 -- CSU01:: efetuar login
 select
-id_funcionario        id,             
-nm_funcionario        nome,
-ds_CPF                cpf,                                  
+id_funcionario        id,                                             
 nm_login              logim,
 ds_senha              senha
 from tb_funcionario 
-where ds_login 		= 'admin@admin.com.br'
-and ds_senha		= '1234';;
+where nm_login 		= 'admin@admin.com.br'
+and ds_senha		= '1234';
 
 value('Marquinhos', 839749432,'Marqn','mar0202');
 

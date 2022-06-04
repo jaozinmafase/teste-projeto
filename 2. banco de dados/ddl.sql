@@ -3,7 +3,6 @@ create database bancopsicoDB;
 use bancopsicoDB;
 
 create table tb_funcionario(
-
 id_funcionario                int primary key auto_increment,
 nm_funcionario                varchar(200),
 ds_CPF                        varchar(200),
