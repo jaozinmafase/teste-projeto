@@ -38,7 +38,22 @@ value (
 DELETE FROM tb_prontuario_paciente 
        WHERE id_prontuario = 1;
 
--- CSU04:: alteraro registro de um paciente
+ -- CSU04:: consultar todos pacientes
+
+
+
+-- CSU05:: pesquisar por um paciente
+
+SELECT id_prontuario	        id,
+	  nm_paciente			    nome,
+       ds_telefone		        telefone,
+       ds_queixa_principal	    queixa,
+       ds_diagnostico	        ds_diagnostico
+       ds_proximas_sessoes      proximas sessões
+  FROM tb_prontuario_paciente
+ WHERE nm_paciente			like '%a%';
+
+ -- CSU06:: alteraro registro de um paciente
 
 UPDATE tb_prontuario_paciente 
    SET nm_paciente      = 'Matheus',     
@@ -52,16 +67,3 @@ ds_trat_ant = false,                         ds_medic_utili = '',
 ds_diagnostico = ' Muito trabalhador',       ds_metas_alcancadas = 'até o marco 6',
 ds_sessoes_realizadas = '2022-05-27',        ds_proximas_sessoes = '2022-06-10'
  WHERE id_prontuario = 1;
-
--- CSU05:: pesquisar por um paciente
-
-SELECT id_prontuario	        id,
-	  nm_paciente			    nome,
-       ds_telefone		        telefone,
-       ds_queixa_principal	    queixa,
-       ds_diagnostico	        ds_diagnostico
-       ds_proximas_sessoes      proximas sessões
-  FROM tb_prontuario_paciente
- WHERE nm_paciente			like '%a%';
-
- 
