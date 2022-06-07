@@ -64,7 +64,7 @@ server.get('/pacientes', async (req, resp) => {
     }
 })
 
-server.get('/pacientes/nomes', async (req, resp) => {
+server.get('/pacientes/buscas', async (req, resp) => {
     try{ 
         const {nome} = req.query;
         const resposta = await buscarPacientesNome(nome);
