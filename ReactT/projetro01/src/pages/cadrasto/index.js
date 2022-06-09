@@ -6,15 +6,20 @@ export default function Index(){
 
     return(
        <main className='page-cadrastro' >
-        <div class="cabecalho">
-                <Link className='tagA' to="/menu"> voltar para o menu</Link>
-                <Link className='tagA' to="/home"> Voltar para a pagina principal</Link>
-                <Link className='tagA' to="/consultar">Voltar para tela de consulta de pacientes</Link>
-            </div>
+               <div className='c2'>
+            <Link className='button' to="/menu">voltar</Link>
+        </div>
+
 
       <div className='main'>
     
-      <h1>Sobre paciente e date</h1>
+     
+      <div className='cabecalho'>
+       <h3 className='titulo'>Cadrastar um Prontuario</h3>
+      </div>
+    
+    
+      
      <div className='formulario1'>
                         <div class="cadrasto1">
                             <div>

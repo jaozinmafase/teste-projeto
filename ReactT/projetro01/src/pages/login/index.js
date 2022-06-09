@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import { login } from '../../api/usuarioAPI'
-
+import storage from 'local-storage'
 import  LoadingBar  from 'react-top-loading-bar'
 import {useNavigate} from 'react-router-dom'
 import {useState, useRef} from 'react'
@@ -24,7 +24,8 @@ export default function Index() {
 
          try{
               const r = await login(email,senha);
-             
+              storage('asuario-logado', r);
+              
 
             setTimeout(()=>{
                 navigate('/menu');
@@ -32,13 +33,15 @@ export default function Index() {
 
           
 
-        }catch (err) {
+        }catch(err){
             ref.current.complete();
-            setCarregando(false);
+            setCarregando(false)
+             
             if(err.response.status===401){
-                setErro(err.response.data.erro);
-
+                setErro(err.response.data.erro)
             }
+            
+            
         }
     }
 
@@ -61,7 +64,7 @@ export default function Index() {
             
 
                     <div className='div1'>
-                        <h1>Logar</h1>
+                        <h1>Login</h1>
                         <input type="text" placeholder="email" value={email} onChange={e => setEmail(e.target.value)} /> 
                     <br />   <br />
                         <input type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)}/>

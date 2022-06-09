@@ -1,5 +1,23 @@
 .page-menu{
 
+     .button{
+         padding: 10px 10px;
+        background-color: #4b10aa;
+        text-decoration: none;
+        border-radius: 20px;
+        transition:  background-color 1s;
+        color: white;
+        font-size: 15px;
+     }
+     .c2{
+        margin-top: 2em;
+       margin-left: 3px;
+         
+     }
+     .button:hover{
+        padding: 12px 12px;
+        background-color: #8740f8;
+     }
     .c1{
         display: flex;
         flex-direction: column;
@@ -14,7 +32,7 @@
         background-color: rgb(214, 247, 236);
     }
     .sc1{
-        margin-top: 1em;
+        margin-top: 5em;
         display: flex;
         flex-direction: column;
         height: 600px;
@@ -23,6 +41,7 @@
         background-color: #C7A5FE;
         border-radius: 20px;
         transition:  background-color 1s;
+        
     }
     
     .sc1:hover{

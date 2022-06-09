@@ -6,53 +6,98 @@ export default function Index(){
 
     return(
        <main className='page-consultar' >
-         <main class="main">
 
-<div className='divsona'>
-    <div className='div-titulo'>
-       <h1 class="titulo">Consultar pacientes</h1> 
-    </div>
-    <div class="div-pesquisa">
-        <input className='pesquisa' type="text" />
-        <img className='imagem' src='./image/ff97a937322b46f443be20b2b676a7f6-lupa-icone-de-lupa.png ' alt=''/>
-    </div>
-</div>
-<div className='aaa'>
-<div className='divsona2'>
-    <div className='div-pacientes'>
-        <div className='pacientes'>
-            <p className='txt-botoes'>Jonatas da Silva Prado</p>
-        </div>
-        <div className='pacientes'>
-            <p className='txt-botoes'>João Victor Andrade</p>
-        </div>
-        <div className='pacientes'>
-            <p className='txt-botoes'>Marcelo Araújo</p>
-        </div>
-    </div>
-    <div className='div-editar'>
-        <button className='bt-editar'>
-            <p className='txt-botoes'>Editar</p>
-        </button>
-        <button className='bt-editar'><p class="txt-botoes">Editar</p></button>
-        <button class="bt-editar"><p class="txt-botoes">Editar</p></button>
-        
-    </div>
-    <div className='div-editar'>
-        <button className='bt-remove'>
-            <p className='txt-botoes'>Remover</p>
-        </button>
-        <button className='bt-remove'>
-            <p className='txt-botoes'>Remover</p>
-        </button>
-        <button className='bt-remove'>
-            <p className='txt-botoes'>Remover</p>
-        </button>
-        
-    </div>
-</div>
-</div>
-</main>
+           <div className='main'>
+               <h1>Consultar um Prontuario</h1>
+               <div className='cx'>
+                   <div> <input type="text"  className='search-txt' placeholder='consultar'/></div>
+                  
+                  <div><img  src='./image/622669.png'/></div> 
+                 
+               </div>
+
+              <div>
+                  <div className='c1'> 
+
+                  <div><button className='btnome'>MarcoFelipe xxxxxxxx</button></div>
+                  <div className='c2'>
+                      <button className='btnome'>editar</button>
+                    </div>
+
+                  <div className='c2'> 
+                      <button className='btnome'>romover</button>
+                 </div>
+                 
+                    </div>
+                    <div className='c3'> 
+
+                    <div><button className='btnome'>MarcoFelipe xxxxxxxx</button></div>
+                    <div className='c2'>
+                        <button className='btnome'>editar</button>
+                    </div>
+
+                    <div className='c2'> 
+                        <button className='btnome'>romover</button>
+                    </div>
+
+                  </div>
+                  <div className='c3'> 
+
+                    <div><button className='btnome'>MarcoFelipe xxxxxxxx</button></div>
+                    <div className='c2'>
+                        <button className='btnome'>editar</button>
+                    </div>
+
+                    <div className='c2'> 
+                        <button className='btnome'>romover</button>
+                    </div>
+
+                    </div>
+                    <div className='c3'> 
+
+                    <div><button className='btnome'>MarcoFelipe xxxxxxxx</button></div>
+                    <div className='c2'>
+                        <button className='btnome'>editar</button>
+                    </div>
+
+                    <div className='c2'> 
+                        <button className='btnome'>romover</button>
+                    </div>
+
+                    </div>
+                    <div className='c3'> 
+
+                    <div><button className='btnome'>MarcoFelipe xxxxxxxx</button></div>
+                    <div className='c2'>
+                        <button className='btnome'>editar</button>
+                    </div>
+
+                    <div className='c2'> 
+                        <button className='btnome'>romover</button>
+                    </div>
+
+                    </div>
+                    <div className='c3'> 
+
+                    <div><button className='btnome'>MarcoFelipe xxxxxxxx</button></div>
+                    <div className='c2'>
+                        <button className='btnome'>editar</button>
+                    </div>
+
+                    <div className='c2'> 
+                        <button className='btnome'>romover</button>
+                    </div>
+
+                    </div>
+
+                 
+
+ 
+ 
+              
+               </div>
+
+           </div>
        </main>
 
     )
