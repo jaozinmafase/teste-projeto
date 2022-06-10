@@ -1,6 +1,6 @@
 import 'dotenv/config'
-import usuarioController from './controller/usuarioController.js'
-import pacienteController from './controller/pacienteController.js'
+import usuarioController from './src/controller/usuarioController.js'
+import pacienteController from './src/controller/pacienteController.js'
 import express from 'express'
 import cors from 'cors'
 
