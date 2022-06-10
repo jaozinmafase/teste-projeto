@@ -47,12 +47,9 @@
     .container2{
         display: flex;
         flex-direction: column;
-        height: 80vh;
+        height: 60vh;
+        margin-top:1em;
         
-        
-        
-       
-    
     }
     .container3{
         display: flex;
@@ -108,7 +105,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
-      margin-top: 1em;
+      margin: 1em;
       text-align: center;
     }
     
@@ -118,6 +115,7 @@
         text-align: center;
     }
     .v1{
+        margin-top: 20px;
         text-align: center;
     }
     .v2{
