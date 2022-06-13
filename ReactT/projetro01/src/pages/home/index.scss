@@ -14,35 +14,46 @@
        
     }
     .footer{
-        display: flex;
-        flex-direction:row ;
-       background-color: rgb(68, 67, 67);
+       display: flex;
+       flex-direction:row ;
+       background-color: rgb(42, 42, 48);
        height: 60vh;
        justify-content: space-around;
+       padding: 2em;
+
     }
+            
+   
     .f{
+        margin: 3em;
         display: flex;
         flex-direction: row;
-       
+
     }
     .f1{
+        
         display: flex;
         flex-direction: column;
         text-align: center;
+        align-items: center;
+        justify-content: center;
     }
-    .f2{
-        margin-left: 1em;
+    .f3{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: flex-start;
+        justify-content: center;
     }
+
     .container1{
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 85vh;
         background-image: url(../../../public/image/20471179.jpg);
         background-attachment: fixed;
-        background-position: right;
+        background-position: center bottom;
         
-       
-    
     }
     .container2{
         display: flex;
@@ -61,14 +72,17 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        
+        margin-top: 3em;
+        padding: 1em;   
     }
+
     
     
     .subcontainer2{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+       
     }
     
     .subcontainerx{
@@ -87,7 +101,7 @@
     }
     
     .subcontainer3{
-        margin-top: 10em;
+        margin-top: 2em;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -97,25 +111,35 @@
         display: flex;
         flex-direction: column;
         background-color:  #D7C5FF;
+        justify-content: center;
         text-align: center;
-      
+        align-items: center;
+        height: 60vh;
+        padding: 2em;   
+    }
+    .textoarrumado{
+        font-size: 26px;
+        width: 820px;
+        font-family: 'discord5';
     }
     
     .subcontainer4{
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
-      margin: 1em;
       text-align: center;
+      align-items: center;
     }
     
     .sub5{
         display: flex;
         flex-direction: column;
         text-align: center;
+        justify-content: center;
+        padding: 2em;
+        height: 60vh;
     }
     .v1{
-        margin-top: 20px;
         text-align: center;
     }
     .v2{
@@ -127,25 +151,27 @@
      flex-direction: row;
      text-align: center;
     }
-    .v5{
-        margin-top: 8em;
-    }
     .v6{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         background-color:  #D7C5FF;
         text-align: center;
-        margin-top: 3em;
+        align-items: center;
+        padding: 2em;
+        height: 60vh;
     
     }
     .v7{
         margin-top: 3em;
     }
-    .v8{display: flex;
+    .v8{
+     display: flex;
      flex-direction: row;
      text-align: center;
      justify-content: space-evenly;
+     height: 60vh;
+     align-items: center;
     }
     
     
@@ -154,6 +180,8 @@
         height: 100px;
         width: 100px;
         border-radius: 70px;
+        margin-top: 0.6em;
+        margin-left: 0.6em;
         
     }
     
@@ -169,20 +197,21 @@
     
     
     .img2{
-        height: 455px;
-         width: 455px;
+        height: 400px;
+         width: 400px;
     
     
     }
     .img3{
-        height: 500px;
-         width: 500px;
+        height: 400px;
+         width: 400px;
+         margin-top: 2em ;
     
     
     }
     .img4{
-        height: 455px;
-         width: 455px;
+        height: 400px;
+         width: 400px;
     
     
     }
@@ -191,8 +220,10 @@
         padding: 12px 20px;
         border-radius: 30px;
         border: none;
-        background-color: rgb(212, 163, 245);
+        background-color: rgb(33, 47, 167);
         margin-top: 1em;
+        margin-right: 0.6em;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
        
     }
     .b1:hover{
@@ -242,10 +273,8 @@
        color: beige;
     }
     .imgcard{
-        height: 257px;
-        width: 301px;
-    
-    
+        height: 255px;
+        width: 255px; 
     }
     
     .content{
@@ -264,18 +293,30 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+        padding: 2em;
     }
     
     .containerx{
         margin-top: 5em;
+        padding: 2em;
         display: flex;
         flex-direction: column;
         text-align: center;
-        background-color: #f4f5c7 ;
+        justify-content: center;
+        align-items: center;
+        background-color: #D7C5FF ;
+        height: 60vh;
     }
+    .texto2{
+        font-size: 26px;
+        width: 900px;
+        font-family: 'discord5';
+    }
+
+
     .imgx{
-        height: 600px;
-        width: 600px;
+        height: 400px;
+        width: 400px;
        
     }
     .buttomText{
@@ -283,7 +324,11 @@
         line-height: 3px;
     }
     .ax{
-        color: rgb(203, 243, 166);
+        color: rgb(255, 255, 255);
+        font-family: 'discord3';
+    }
+    .k{
+        color: white;
     }
     h3{
         font-family: 'discord1';
@@ -295,13 +340,14 @@
     p{
         font-family: 'discord5';
         line-height: 3px;
-        font-size: 20px;
+        font-size: 26px;
     }
     
     h1{
         font-family: 'discord5';
         line-height: 3px;
-        font-size: 30px;
+        font-size: 48px;
+        color: #2C52AC;
         
     
     }
@@ -316,30 +362,61 @@
         font-family: 'discord5';
     }
     
-    @media(max-width:440px)
+    @media(max-width:500px)
 {
      footer{
          display: flex;
          flex-direction: row;
      }
-     .v5{
-         margin-right: 10px;
+     .v2{
+        margin: 0px;
      }
+     .img2{
+        height: 200px;
+     }
+     .container1{
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        background-position: center;
+     }
+     .subcontainer1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+     .subcontainer2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .subcontainer3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+     .container2{
+        height: 55vh;
+     }
+
      .v8{
+         padding: 2em;
          display: flex;
          flex-direction: column;
+         height: 55vh;
      }
-    .k{
-        margin-top: 1em;
-        margin-left: 3px;
-        color: white;
-    }
     .subcontainer4{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+    }
+    .sub5{
+        height: 60vh;
     }
     .sub{
+        height: 40vh;
         display: flex;
         flex-direction: column;
 
@@ -347,14 +424,44 @@
      .v6{
         display: flex;
         flex-direction: column;
-
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        padding: 0;
      }
+
+     .textoarrumado{
+        font-size: 15px;
+        width: 320px;
+        font-family: 'discord5';
+    }
+
+     .containerx{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        background-color: #D7C5FF ;
+        height: 55vh;
+        font-size: 15px;
+        font-family: 'discord5';
+    }
+    .texto2{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        font-size: 15px;
+        width: 420px;
+        font-family: 'discord5';
+    }
 
     h3{
         color: rgb(253, 253, 253);
         font-size: 30px;
     }  
     h1{
+        margin-top: 1em;
         font-size: 22px;
         line-height: 30px;
     }
@@ -364,10 +471,9 @@
 
     }
     .img1{
-        height: 79px;
-      width: 80px;
+     height: 79px;
+     width: 80px;
      border-radius: 199px;
-
     }
     .img2{
         height: 255px;
@@ -376,20 +482,18 @@
     
     }
     .img3{
-        height: 300px;
-         width: 300px;
+        height: 255px;
+         width: 255px;
     
     
     }
     .img4{
         height: 255px;
          width: 255px;
-    
-    
     }
     .imgx{
-        height: 400px;
-        width: 300px;
+        height: 255px;
+        width: 255px;
        
     }
     .imgc{
@@ -415,6 +519,9 @@
          display: flex;
          flex-direction: column;
          align-items: center;
+     }
+     .ax{
+        font-size: 1.5em;
      }
 
 }

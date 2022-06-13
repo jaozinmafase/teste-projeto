@@ -4,7 +4,7 @@ import { login } from '../../api/usuarioAPI'
 import storage from 'local-storage'
 import  LoadingBar  from 'react-top-loading-bar'
 import {useNavigate} from 'react-router-dom'
-import {useState, useRef} from 'react'
+import {useState, useRef, useEffect} from 'react'
 
 import './index.scss'
 
@@ -18,6 +18,12 @@ export default function Index() {
     const navigate = useNavigate();
     const ref = useRef();
     
+    useEffect(() => {
+        if(storage('asuario-logado'))
+            navigate('/menu') ;
+    }, [])
+    
+
      async function   entrarClick(){
         ref.current.continuousStart();
         setCarregando(true);
@@ -74,7 +80,7 @@ export default function Index() {
                         
                     </div>
             
-            
+                    <div> {erro} </div>
             </div>
     </main>
     )

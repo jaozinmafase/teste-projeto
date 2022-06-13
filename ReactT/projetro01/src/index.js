@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import storage from 'local-storage'
-import App from './App';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 
 import Cadrastar from './pages/cadrasto'
@@ -18,10 +18,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
      <Routes>
-     <Route path='/' element={< App />} />
        <Route path='/cadrasto' element={<Cadrastar />} />
        <Route path='/consultar' element={<Consultar />} />
-       <Route path='/home' element={<Home />} />
+       <Route path='/' element={<Home />} />
        <Route path='/login' element={<Login />} />
        <Route path='/menu' element={<Menu/>} />
 

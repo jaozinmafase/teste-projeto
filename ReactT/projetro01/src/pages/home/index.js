@@ -58,9 +58,9 @@ export default function Index(){
     </div>
 
     <div className='sub'>
-      <div>
-        <h1>O objetivo da psicologia e diagnosticar, comprender,explicar e orientar a</h1>
-        <h1> mudança de comportamentos humanos</h1>
+      <div className='textoarrumado'>
+        O objetivo da psicologia e diagnosticar, comprender,explicar e orientar 
+        a mudança de comportamentos humanos
       </div>
       <div>
       <img  className='img3'src='image/Processing thoughts-bro.png' alt=''/>
@@ -75,7 +75,7 @@ export default function Index(){
 
       <div  className='subcontainer4'>
         <div>
-          <img className='img4' src='./image/Psychologist-rafiki.png'/>
+          <img className='img4' src='./image/Psychologist-rafiki.png' alt=''/>
         </div> 
         <div className='v5' >
           <p>Esse profissional serve como um</p>
@@ -104,14 +104,14 @@ export default function Index(){
         
       </div>
       <div className='v7'>
-        <img  className='img4'  src ='./image/00 1.svg'/>
+        <img  className='img4'  src ='./image/00 1.svg' alt=''/>
       </div>
       
     </div>
 
     <div className='v8' >
         <div>
-          <img className='img4' src='./image/d5c9b514b4a2e863a64ec7e97be4266d-personagem-de-homem-triste.png'/>
+          <img className='img4' src='./image/d5c9b514b4a2e863a64ec7e97be4266d-personagem-de-homem-triste.png' alt=''/>
         </div>
             <div className='v5'>
                 <p>E lembre-se,quando</p>
@@ -132,7 +132,7 @@ export default function Index(){
 
     </div>
     <div>
-     <img className='img4' src='./image/Psychologist-amico.png'/>
+     <img className='img4' src='./image/Psychologist-amico.png' alt=''/>
     </div>
   </div>
 
@@ -148,7 +148,7 @@ export default function Index(){
                     
                   </div> 
                   <div >
-                    <img className='imgcard' src='./image/Social distance at school-bro.png'/>
+                    <img className='imgcard' src='./image/Social distance at school-bro.png' alt=''/>
                   </div>
                   <div>
                         <spam className='buttomText'>A Psicologia Infantil é um ramo da ciência que trata das questões psíquicas de crianças. Assim, essa especialidade investiga e analisa o comportamento dessa faixa etária.</spam>
@@ -165,7 +165,7 @@ export default function Index(){
                  
                </div> 
                <div>
-                 <img className='imgcard' src='./image/Mental health-bro.png'/>
+                 <img className='imgcard' src='./image/Mental health-bro.png' alt=''/>
                </div>
                <div >
                      <spam className='buttomText'>O autoconhecimento ou conhecimento de si é a investigação de si mesmo. Ele envolve o uso da autoconsciência e o desenvolvimento da autoimagem.</spam>
@@ -181,7 +181,7 @@ export default function Index(){
                 
               </div> 
               <div >
-                <img className='imgcard' src='./image/Post-traumatic stress disorder-amico (1).png'/>
+                <img className='imgcard' src='./image/Post-traumatic stress disorder-amico (1).png' alt=''/>
               </div>
               <div >
                     <spam className='buttomText'>A persistência de emoções como a tristeza e a frustração pode desencadear desequilíbrios químicos no organismo que causam transtornos mentais mais sérios, e nos da saude mental ajudaremos voçe vençer todo esse prosseso</spam>
@@ -189,65 +189,67 @@ export default function Index(){
             </div>
      
       </div>
+     </div>
     </div>
-
     <div className='containerx'>
       <h1>Sobre Nós</h1>
-      <p>Nós somos um consultório de psicologia que atua na área desde 2012. E temos como missão</p>
-      <p>ajudar os nossos pacientes,  através da psicologia,  a  ter uma boa saúde mental </p>
+        <div className='texto2'> Nós somos um consultório de psicologia que atua na área desde 2012. E temos como missão
+        ajudar os nossos pacientes,  através da psicologia,  a  ter uma boa saúde mental </div>
       <div>
-        <img className='imgx' src='./image/Mental health-amico.png'/>
+        <img className='imgx' src='./image/Mental health-amico.png' alt=''/>
       </div>
     </div>
 
   
     <div className='footer'>
-      <div>
+      <div className='f3'>
       <div  className='subcontainer2'>
         
-           <img className='img1' src='./image/c1fa70e6b769e6e28d267bdfb67ca07e.jpg'/>
+           <img className='img1' src='./image/c1fa70e6b769e6e28d267bdfb67ca07e.jpg' alt=''/>
            <h1  className='k'>Saude Mental</h1>
         
       </div>
       <div >
-        <h1>Contatos</h1>
+        <h1 className='k'>Contatos</h1>
       </div>
       <div  className='subcontainerx'>
-        <img  className='imgc' src='/image/69d4234d292e7ad304519d74aad2f561.jpg'/>
+        <img  className='imgc' src='/image/69d4234d292e7ad304519d74aad2f561.jpg' alt=''/>
         <p  className='k'>55 11 92334-4234</p>
       </div>
       <div  className='subcontainerx1'> 
-        <img  className=' imgc' src='./image/download.png'/>
+        <img  className=' imgc' src='./image/download.png' alt=''/>
         <p  class="k">5555-5555</p>
       </div>
       <div  className='subcontainerx1'>
-        <img  className='imgc' src='./image/Icone-email-1-preto.png'/>
+        <img  className='imgc' src='./image/Icone-email-1-preto.png' alt=''/>
         <p  className='k' >MarcoFelipe@gmail.com</p>
       </div>
       </div>
       <div className='f1'>
-        <h1>
-          Psicologo responsavel
+        <h1 className='k'>
+          Psicologo responsável
         </h1>
-        <h1>
+        <h1 className='k'>
           Marcos Felipe prado
         </h1>
-        </div>
-        <div className='f'>
-          <div>
-            <img  className='imgc' src='./image//a6d555266824307026e70706659ff785.jpg'/>
+        
+          <div className='f'> 
+          <div className='f2'>
+            <img  className='imgc' src='./image//a6d555266824307026e70706659ff785.jpg' alt=''/>
           </div>
           <div className='f2'>
-            <img   className='imgc' src='./image/1a1aa162e286baa94871e0724cda27ee.jpg'/>
+            <img   className='imgc' src='./image/1a1aa162e286baa94871e0724cda27ee.jpg' alt=''/>
             
           </div>
           <div class="f2">
-            <img   className='imgc' src='./image/aaa.png'/>
+            <img   className='imgc' src='./image/aaa.png' alt=''/>
           </div>
+
+          </div>
+
          
         </div>
       </div>
-    </div>
    
     
         </main>
