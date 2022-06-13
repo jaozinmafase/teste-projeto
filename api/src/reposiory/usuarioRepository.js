@@ -5,8 +5,8 @@ export  async  function  loginusuario(login, senha){
     console.log(login);
     console.log(senha);
     const comando =  
-    `select id_funcionario 		id,
-           nm_funcionario	       nome,
+    `select id_usuario 		id,
+           nm_usuario	       nome,
            nm_login			email
       from tb_funcionario
      where nm_login 		       = ?

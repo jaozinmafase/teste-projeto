@@ -3,16 +3,15 @@ create database bancopsicoDB;
 use bancopsicoDB;
 
 CREATE TABLE tb_funcionario (
-	id_funcionario		int primary key auto_increment,
+	id_usuario		int primary key auto_increment,
     nm_usuario		varchar(200),
-    ds_email		varchar(200),
+    nm_login 		varchar(200),
     ds_senha		varchar(20)
 );
 
 create table tb_prontuario_paciente(
-
 id_prontuario                int primary key auto_increment not null,
-id_funcionario                int not null,
+id_usuario                int not null,
 nm_paciente                    varchar(200) not null,
 dt_nascimento                date not null,
 ds_cep                        varchar(200) not null,
@@ -31,6 +30,5 @@ ds_diagnostico                varchar(600) not null,
 ds_metas_alcancadas            varchar(600) not null,
 ds_sessoes_realizadas        varchar(600) not null,
 ds_proximas_sessoes            varchar(600) not null,
-foreign key (id_prontuario) references tb_funcionario (id_funcionario)
-
+foreign key (id_usuario) references tb_funcionario (id_usuario)
 );

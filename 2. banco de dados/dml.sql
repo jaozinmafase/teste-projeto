@@ -1,4 +1,4 @@
-INSERT INTO tb_usuario (nm_usuario, ds_email, ds_senha)
+INSERT INTO tb_fumcionario(nm_usuario, ds_email, ds_senha)
      VALUES ('admin', 'admin@admin.com.br', '1234');
 
 
