@@ -71,3 +71,8 @@ queixaprincipal, outrasqueixas, anamnese, hipotese,temtratant,usamedicamentos, t
         const respost = await api.get(`/pacientes/buscas?=nome=${nome}`)
         return respost.data;
         }
+
+    export async function excluirPaciente(id){
+        const r = await api.delete(`/pacientes/${id}`)
+        return r.status;
+        }

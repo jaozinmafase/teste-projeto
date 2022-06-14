@@ -129,7 +129,7 @@ WHERE id_prontuario = ? `;
     return resposta.affectedRows;
 }
 
-export async function exibirNomeId() { const comando
+export async function exibirNomeId() { const comando=
      ` select id_prontuario	            id,
 	   nm_paciente			            nome
 	   from tb_prontuario_paciente`;
