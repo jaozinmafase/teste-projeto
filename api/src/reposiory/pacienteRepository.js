@@ -5,7 +5,7 @@ export async function adicionarPaciente(paciente){
     ` 
 
         insert into  tb_prontuario_paciente(
-            id_funcionario,
+            id_usuario,
             nm_paciente,             	   dt_nascimento,
             ds_cep,                        ds_endereco,
             ds_telefone,                   dt_consulta,
@@ -22,7 +22,7 @@ export async function adicionarPaciente(paciente){
         value (
             ?, ?, ?, ?, ?, ?, ?, ? ,? ,?, ?, ?, ?, ?, ?, ?, ?, ? ,?) 
     `
-    const [resposta] = await con.query(comando, [paciente.funcionario, paciente.nome, paciente.datanascimento, paciente.cep, paciente.endereco, paciente.telefone, paciente.consulta, 
+    const [resposta] = await con.query(comando, [paciente.id, paciente.nome, paciente.datanascimento, paciente.cep, paciente.endereco, paciente.telefone, paciente.consulta, 
     paciente.queixaprincipal, paciente.outrasqueixas, paciente.anamnese, paciente.hipotese,paciente.temtratant,paciente.usamedicamentos, paciente.trat_ant,paciente.medicamentos,
     paciente.diagnostico, paciente.metasalcancadas,paciente.sessoesrealizadas, paciente.proximassessoes ])
     paciente.id = resposta.insertId
@@ -33,9 +33,9 @@ export async function adicionarPaciente(paciente){
 export async function listarTodosPacientes(){
     const comando =
      `
-     select id_prontuario	   id,
-     nm_paciente			   nome,
-     dt_nascimento               nascimento,
+     select id_prontuario	     id,
+     nm_paciente			      nome,
+     dt_nascimento                nascimento,
      ds_telefone               telefone,
      ds_queixa_principal     queixaprincipal,
      ds_anamnese             anamnese,

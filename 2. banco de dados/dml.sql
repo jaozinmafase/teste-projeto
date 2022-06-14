@@ -1,12 +1,17 @@
-INSERT INTO tb_funcionario(nm_usuario, ds_email, ds_senha)
+INSERT INTO tb_usuario (nm_usuario, ds_email, ds_senha)
      VALUES ('admin', 'admin@admin.com.br', '1234');
 
 
 
 
 -- CSU01:: efetuar login
-INSERT INTO tb_funcionario(nm_usuario, nm_login, ds_senha)
-     VALUES ('admin', 'admin@admin.com.br', '1234');
+select id_usuario 		id,
+       nm_usuario		nome,
+       ds_email			email
+  from tb_usuario
+ where ds_email 		= 'admin@admin.com.br'
+   and ds_senha			= '1234';
+
 
 
   insert into  tb_prontuario_paciente(
