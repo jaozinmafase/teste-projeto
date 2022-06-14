@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import storage from 'local-storage' ;
-import { cadastrarProntuario } from '../../api/pacienteAPI';
+import storage, { set } from 'local-storage' ;
+import { alterarProntuario, cadastrarProntuario } from '../../api/pacienteAPI';
 import {toast} from 'react-toastify'
 import './index.scss';
 
@@ -25,18 +25,50 @@ const [diagnostico,setDiagnostico] = useState('');
 const [metasalcancadas,setmetasalcacandas] = useState('');
 const [sessoesrealizadas,setSessoesrealizadas] = useState('');
 const [proximassessoes,setProximassessoes] = useState('');
+const [id,setId] = useState(0);
 
 async function botaoCadastrar(){
     try{
         const usuario = storage('asuario-logado').id;
+        if(id === 0){ 
         const r = await cadastrarProntuario(nome,dtNascimento,cep,endereco,telefone,
             consulata, queixaprincipal, outrasqueixas,anamnese,hipotese,temtratant,
             usamedicamentos,trat_ant,medicamentosUtilizados,diagnostico,metasalcancadas,
-            sessoesrealizadas,proximassessoes,usuario)
+            sessoesrealizadas,proximassessoes,usuario);
+            setId(r.id);
+            }
+            else
+            { 
+            await alterarProntuario(id,nome,dtNascimento,cep,endereco,telefone,
+                consulata, queixaprincipal, outrasqueixas,anamnese,hipotese,temtratant,
+                usamedicamentos,trat_ant,medicamentosUtilizados,diagnostico,metasalcancadas,
+                sessoesrealizadas,proximassessoes,usuario)  
+            }
             toast('📖 Prontuario Cadastrado com sucesso!')
     }catch(err){
         alert(err.response.data.erro)
     }
+}
+function botaoAlterarSalvar(){
+    setId(0);
+    setNome('');
+    setDtNascimento('');
+    setCep('');
+    setEndereco('');
+    setTelefone('');
+    setConsulta('');
+    setQueixaPrincipal('');
+    setOutrasQueixas('');
+    setAnamnese('');
+    setHipotese('');
+    setTemtratant(false);
+    setUsamedicamentos(false);
+    setTratant('');
+    setMedicamentosUtilizados('');
+    setDiagnostico('');
+    setmetasalcacandas('');
+    setSessoesrealizadas('');
+    setProximassessoes('');
 }
 
     return(
@@ -162,9 +194,11 @@ async function botaoCadastrar(){
     </div>      
    </div> 
    <div className='x2'>
-       <button onClick={botaoCadastrar}>
+       <button onClick={botaoCadastrar}> 
            Cadrastar Prontuario
-       </button>
+       </button> &nbsp;  &nbsp;
+       <button onClick={botaoAlterarSalvar}> {id === 0 ? 'SALVAR' : 'ALTERAR'} </button> &nbsp;  &nbsp;
+       
        </div>
      
 

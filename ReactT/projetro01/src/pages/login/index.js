@@ -78,9 +78,10 @@ export default function Index() {
                         <br />
                         <button className='button' onClick={ entrarClick} disabled={carregando}>  Entrar </button>
                         
+                        <div> {erro} </div>
                     </div>
             
-                    <div> {erro} </div>
+                   
             </div>
     </main>
     )
