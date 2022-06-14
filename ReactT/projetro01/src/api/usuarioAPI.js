@@ -2,7 +2,7 @@
 import axios  from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:3000'
+    baseURL: 'http://localhost:5000'
 })
 
 export async  function login (email, senha){
@@ -13,3 +13,4 @@ export async  function login (email, senha){
        return r.data;
 
 }
+

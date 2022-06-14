@@ -6,8 +6,8 @@ import { loginusuario } from '../reposiory/usuarioRepository.js'
 
 server.post('/usuario/login', async (req, resp) =>{
     try{
-        const {login , senha} = req.body;
-        const resposta = await loginusuario(login, senha)
+        const {email, senha} = req.body;
+        const resposta = await loginusuario(email, senha)
         if(!resposta){
             throw new Error('CREDENCIAIS INVALIDADAS')
         }
