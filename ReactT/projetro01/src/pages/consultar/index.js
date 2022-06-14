@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { buscarPacientesNome } from '../../../../../api/src/reposiory/pacienteRepository';
 import {listarPorNome, listarTodosFilmes} from '../../api/pacienteAPI';
 
 import './index.scss';
@@ -13,7 +12,7 @@ export default function Index(){
         setPacientes(resp);
     }
     async function filtrar(){
-        const resp = await buscarPacientesNome(filtro);
+        const resp = await listarPorNome(filtro);
         setPacientes(resp);
     }
     useEffect(()=> {
