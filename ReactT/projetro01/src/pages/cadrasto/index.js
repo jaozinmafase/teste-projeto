@@ -124,7 +124,7 @@ function botaoAlterarSalvar(){
                             <h2>
                                 consulta
                             </h2>
-                            <input type="text" value={consulata} onChange={e => setConsulta(e.target.value)}/>
+                            <input type="date" value={consulata} onChange={e => setConsulta(e.target.value)}/>
                         </div>
                         
                         </div>
@@ -155,11 +155,11 @@ function botaoAlterarSalvar(){
                 <div >
                     <div>
                     <label for="input">Teve tratamentos anteriores</label>
-                    <input  type="checkbox" checked={temtratant} onChange={e => setTemtratant(e.target.value)}/>
+                    <input  type="checkbox" checked={temtratant} onChange={e => setTemtratant(e.target.checked)}/>
                     </div>
                     <div>
                     <label for="input">Não usa medicamentos</label>
-                    <input type="checkbox" checked={usamedicamentos} onChange={e => setUsamedicamentos(e.target.value)}/>
+                    <input type="checkbox" checked={usamedicamentos} onChange={e => setUsamedicamentos(e.target.checked)}/>
                 </div>
 
                 <div  >
