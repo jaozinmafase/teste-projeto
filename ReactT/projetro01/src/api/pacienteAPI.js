@@ -62,3 +62,12 @@ queixaprincipal, outrasqueixas, anamnese, hipotese,temtratant,usamedicamentos, t
                     return resposta.data
                     
             }
+    export async function listarTodosFilmes(){ 
+    const respost = await api.get(`/pacientes`)
+    return respost.data;
+    }
+
+    export async function listarPorNome(nome){ 
+        const respost = await api.get(`/pacientes/buscas?=nome=${nome}`)
+        return respost.data;
+        }

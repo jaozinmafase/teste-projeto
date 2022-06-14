@@ -59,6 +59,17 @@ export async function listarTodosPacientes(){
         return linhas
 }
 
+export async function listarPacientesNome(nome){
+    const comando =
+     `
+     select id_prontuario	   id,
+     nm_paciente			   nome,
+	 from tb_prontuario_paciente
+ where nm_paciente like ? `
+
+        const [linhas] = await con.query(comando, [ `%${nome}%` ]);
+        return linhas;
+}
 
 export async function buscarPacientesNome(nome){
     const comando =
@@ -117,3 +128,13 @@ WHERE id_prontuario = ? `;
         paciente.diagnostico, paciente.metasalcancadas,paciente.sessoesrealizadas, paciente.proximassessoes, id]);
     return resposta.affectedRows;
 }
+
+export async function exibirNomeId() { const comando
+     ` select id_prontuario	            id,
+	   nm_paciente			            nome
+	   from tb_prontuario_paciente`;
+    
+    const [resposta] = await con.query(comando)
+    return resposta
+    }
+   

@@ -1,4 +1,4 @@
-import { adicionarPaciente, alterarPaciente, buscarPacientesNome, listarTodosPacientes, removerPaciente } from "../reposiory/pacienteRepository.js";
+import { adicionarPaciente, alterarPaciente, buscarPacientesNome, exibirNomeId, listarTodosPacientes, removerPaciente } from "../reposiory/pacienteRepository.js";
 import { Router } from "express";
 const server = Router();
 
@@ -51,10 +51,37 @@ server.post('/protuario/paciente', async (req, resp) => {
             }
 })
 
-
 server.get('/pacientes', async (req, resp) => {
     try{ 
+        const resposta = await exibirNomeId();
+        resp.send(resposta)
+
+    }catch(err){
+        resp.status(400).send({
+            erro: err.message
+        });
+    }
+})
+
+server.get('/pacientes/dados', async (req, resp) => {
+    try{ 
         const resposta = await listarTodosPacientes();
+        resp.send(resposta)
+
+    }catch(err){
+        resp.status(400).send({
+            erro: err.message
+        });
+    }
+})
+
+
+server.get('/pacientes/filtro', async (req, resp) => {
+    try{ 
+        const {nome} = req.query;
+        const resposta = await buscarPacientesNome(nome);
+        if(!resposta)
+            resp.status(404).send([])
         resp.send(resposta)
 
     }catch(err){
