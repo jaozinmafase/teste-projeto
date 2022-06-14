@@ -30,6 +30,7 @@ export default function Index() {
 
          try{
               const r = await login(email,senha);
+              alert('foi')
               storage('asuario-logado', r);
               
 
