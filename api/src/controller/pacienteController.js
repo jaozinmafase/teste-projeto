@@ -39,7 +39,7 @@ server.post('/protuario/paciente', async (req, resp) => {
             throw new Error('sessões realizadas obrigatorio')
         if(!pacienteParaInserir.proximassessoes)
             throw new Error('proximas sessões obrigatorio')
-        if(!pacienteParaInserir.funcionario)
+        if(!pacienteParaInserir.id)
             throw new Error('funcionario obrigatorio')
 
         const pacienteInserido = await adicionarPaciente(pacienteParaInserir)

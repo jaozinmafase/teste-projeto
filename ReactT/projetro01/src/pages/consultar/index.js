@@ -1,18 +1,23 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import {excluirPaciente, listarPorNome, listarTodosFilmes} from '../../api/pacienteAPI';
 import { confirmAlert } from 'react-confirm-alert';
+
+import {excluirPaciente, listarPorNome, listarTodosFilmes, buscarPacientesNome, listarTodosPacientes} from '../../api/pacienteAPI';
+
+
+
 import './index.scss';
+
 export default function Index(){
     const [pacientes, setPacientes] = useState([]);
     const [filtro, setFiltro] = useState('');
 
     async function carregarTodosPacientes(){
-        const resp= await listarTodosFilmes()
+        const resp= await listarTodosPacientes()
         setPacientes(resp);
     }
     async function filtrar(){
-        const resp = await listarPorNome(filtro);
+        const resp = await buscarPacientesNome(filtro);
         setPacientes(resp);
     }
  
@@ -46,7 +51,14 @@ export default function Index(){
     return(
        <main className='page-consultar' >
 
+         <div className='bca'>
+                   <button className='b1'>
+                       <Link className='c' to="/menu">voltar</Link>
+                   </button>
+               </div>
+
            <div className='main'>
+               
                <h1>Consultar um Prontuario</h1>
                <div className='cx'>
                    

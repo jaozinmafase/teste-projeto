@@ -28,7 +28,7 @@ queixaprincipal, outrasqueixas, anamnese, hipotese,temtratant,usamedicamentos, t
             metasalcancadas:metasalcancadas,
             sessoesrealizadas:sessoesrealizadas,                   
             proximassessoes:proximassessoes,
-            funcionario: usuario
+            id: usuario
             })
             return resposta.data
             
@@ -57,17 +57,17 @@ queixaprincipal, outrasqueixas, anamnese, hipotese,temtratant,usamedicamentos, t
                     metasalcancadas:metasalcancadas,
                     sessoesrealizadas:sessoesrealizadas,                   
                     proximassessoes:proximassessoes,
-                    funcionario: usuario
+                    id: usuario
                     })
                     return resposta.data
                     
             }
-    export async function listarTodosFilmes(){ 
+    export async function listarTodosPacientes(){ 
     const respost = await api.get(`/pacientes`)
     return respost.data;
     }
 
-    export async function listarPorNome(nome){ 
+    export async function buscarPacientesNome(nome){ 
         const respost = await api.get(`/pacientes/buscas?=nome=${nome}`)
         return respost.data;
         }
