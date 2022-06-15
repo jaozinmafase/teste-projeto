@@ -21,8 +21,12 @@ root.render(
     <BrowserRouter>
      <Routes>
        <Route path='/cadrasto' element={<Cadrastar />} />
+       <Route path='/alterar/:idParam' element={<Cadrastar />} />
+
        <Route path='/consultar' element={<Consultar />} />
+       
        <Route path='/' element={<Home />} />
+
        <Route path='/login' element={<Login />} />
        <Route path='/menu' element={<Menu/>} />
 

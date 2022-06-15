@@ -1,9 +1,7 @@
 .page-cadrastro{
     background-image: linear-gradient(100deg, rgb(63, 243, 243), rgb(31, 77, 230));
-  
-    *{
-        margin: 0px;
-    }
+    padding: 2em;
+ 
     .main{
         display: flex;
         flex-direction: column;
@@ -16,8 +14,8 @@
         margin-top: 5em;
     }
     .c2{
-        margin-top: 2em;
-       margin-left: 3px;
+        
+        
          
      }
      .DIB{

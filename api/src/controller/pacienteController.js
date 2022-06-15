@@ -1,8 +1,8 @@
-import { adicionarPaciente, alterarPaciente, buscarPacientesNome, exibirNomeId, listarTodosPacientes, removerPaciente } from "../reposiory/pacienteRepository.js";
+import { adicionarPaciente, alterarPaciente,exibirporID, buscarPacientesNome, exibirNomeId, listarTodosPacientes, removerPaciente } from "../reposiory/pacienteRepository.js";
 import { Router } from "express";
 const server = Router();
 
-
+//adicionar pacientes
 server.post('/protuario/paciente', async (req, resp) => {
     try{    
         const pacienteParaInserir = req.body;
@@ -50,7 +50,7 @@ server.post('/protuario/paciente', async (req, resp) => {
                 });
             }
 })
-
+// tela cadastro
 server.get('/pacientes', async (req, resp) => {
     try{ 
         const resposta = await exibirNomeId();
@@ -62,7 +62,7 @@ server.get('/pacientes', async (req, resp) => {
         });
     }
 })
-
+// listar todos os pacientes
 server.get('/pacientes/dados', async (req, resp) => {
     try{ 
         const resposta = await listarTodosPacientes();
@@ -75,7 +75,7 @@ server.get('/pacientes/dados', async (req, resp) => {
     }
 })
 
-
+// filtro buscar por nome
 server.get('/pacientes/filtro', async (req, resp) => {
     try{ 
         const {nome} = req.query;
@@ -90,7 +90,7 @@ server.get('/pacientes/filtro', async (req, resp) => {
         });
     }
 })
-
+//busca por nome
 server.get('/pacientes/buscas', async (req, resp) => {
     try{ 
         const {nome} = req.query;
@@ -105,8 +105,23 @@ server.get('/pacientes/buscas', async (req, resp) => {
         });
     }
 })
+//consultar id
+server.get('/paciente/numero', async (req, resp) => {
+    try{ 
+        const {id} = req.query;
+        const resposta = await exibirporID(id);
+        if(!resposta)
+            resp.status(404).send([])
+        resp.send(resposta)
 
-server.delete('/paciente/:id', async (req,resp) => {
+    }catch(err){
+        resp.status(400).send({
+            erro: err.message
+        });
+    }
+})
+
+server.delete('/prontuario/paciente/:id', async (req,resp) => {
     try{
     const { id } = req.params;
     const resposta = await removerPaciente(id);
@@ -120,7 +135,7 @@ server.delete('/paciente/:id', async (req,resp) => {
 }
 })
 
-server.put('/paciente/:id', async (req,resp) => {
+server.put('/prontuario/paciente/:id', async (req,resp) => {
 try{ 
     const {id} = req.params;
     const paciente = req.body;
@@ -159,7 +174,7 @@ try{
             throw new Error('sessões realizadas obrigatorio')
         if(!paciente.proximassessoes)
             throw new Error('proximas sessões obrigatorio')
-        if(!paciente.funcionario)
+        if(!paciente.id)
             throw new Error('funcionario obrigatorio')
 
     if(resposta != 1)

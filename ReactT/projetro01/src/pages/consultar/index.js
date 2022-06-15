@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { confirmAlert } from 'react-confirm-alert';
 
 import {excluirPaciente, listarPorNome, listarTodosFilmes, buscarPacientesNome, listarTodosPacientes} from '../../api/pacienteAPI';
@@ -11,6 +11,9 @@ import './index.scss';
 export default function Index(){
     const [pacientes, setPacientes] = useState([]);
     const [filtro, setFiltro] = useState('');
+
+    const navigate = useNavigate();
+
 
     async function carregarTodosPacientes(){
         const resp= await listarTodosPacientes()
@@ -27,7 +30,7 @@ export default function Index(){
             message:`deseja mesmo remover ${nome} ?`,
             buttons: [ 
             {
-                label: 'Sim', onclik: async () => {
+                label: 'Sim', onClick: async () => {
                     const resposta = await excluirPaciente(id,nome);
                     if(filtro === '')
                     carregarTodosPacientes();
@@ -43,6 +46,12 @@ export default function Index(){
              ]
         })
     }
+
+    function alterarPacienteClick(id) {
+        navigate(`/alterar/${id}`)
+    }
+
+
     useEffect(()=> {
         carregarTodosPacientes();
     },[])
@@ -76,11 +85,11 @@ export default function Index(){
                 <div>{item.id}</div>
                <div><button className='btnome'>{item.nome}</button></div>
                <div className='c2'>
-                   <button className='btnome'>editar</button>
+                   <button className='btnome' onClick={() => alterarPacienteClick(item.id)}>editar</button>
                  </div>
 
                <div className='c2'> 
-                   <button className='btnome' onClick={excluirPacienteClick(item.id,item.nome)} >remover</button>
+                   <button className='btnome' onClick={() => excluirPacienteClick(item.id,item.nome)} >remover</button>
               </div> 
               </div>
                 )}

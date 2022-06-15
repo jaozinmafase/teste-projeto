@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import storage, { set } from 'local-storage' ;
-import { alterarProntuario, cadastrarProntuario } from '../../api/pacienteAPI';
+
+import { alterarProntuario, cadastrarProntuario, listarId } from '../../api/pacienteAPI';
 import {toast} from 'react-toastify'
 import './index.scss';
 
@@ -27,6 +28,42 @@ const [sessoesrealizadas,setSessoesrealizadas] = useState('');
 const [proximassessoes,setProximassessoes] = useState('');
 const [id,setId] = useState(0);
 
+
+const { idParam } = useParams();
+
+useEffect(() => {
+    if (idParam) {
+        carregarProntuario();
+    }
+}, [])
+
+async function carregarProntuario() {
+    const r = await listarId(idParam);
+
+    setId(r.id);
+    setNome(r.nome);
+    setDtNascimento(r.nascimento.substr(0, 10));
+    setCep(r.cep);
+    setEndereco(r.endereco);
+    setTelefone(r.telefone);
+    setConsulta(r.dataConsulta.substr(0, 10));
+    setQueixaPrincipal(r.queixaprincipal);
+    setOutrasQueixas(r.outrasqueixas);
+    setAnamnese(r.anamnese);
+    setHipotese(r.hipotese);
+    setTemtratant(r.temtratant);
+    setUsamedicamentos(r.usamedicamento);
+    setTratant(r.tratamentoanteriores);
+    setMedicamentosUtilizados(r.medicamentousados);
+    setDiagnostico(r.diagnostico);
+    setmetasalcacandas(r.metasalcancadas);
+    setSessoesrealizadas(r.sessoesrealizadas);
+    setProximassessoes(r.proximassessoes);
+
+    console.log(r);
+}
+
+
 async function botaoCadastrar(){
     try{
         const usuario = storage('asuario-logado').id;
@@ -36,6 +73,7 @@ async function botaoCadastrar(){
             usamedicamentos,trat_ant,medicamentosUtilizados,diagnostico,metasalcancadas,
             sessoesrealizadas,proximassessoes,usuario);
             setId(r.id);
+            alert(`Paciente Cadastrado 🔥🔥`)
             }
             else
             { 
@@ -43,6 +81,7 @@ async function botaoCadastrar(){
                 consulata, queixaprincipal, outrasqueixas,anamnese,hipotese,temtratant,
                 usamedicamentos,trat_ant,medicamentosUtilizados,diagnostico,metasalcancadas,
                 sessoesrealizadas,proximassessoes,usuario)  
+                alert('PRONTUÁRIO ALTERADO COM SUCESSO 😁')
             }
             toast('📖 Prontuario Cadastrado com sucesso!')
     }catch(err){
@@ -82,7 +121,7 @@ function botaoAlterarSalvar(){
     
      
       <div className='cabecalho'>
-       <h3 className='titulo'>Cadrastar um Prontuario</h3>
+       <h3 className='titulo'>Cadastrar um Prontuario</h3>
       </div>
     
     
@@ -95,13 +134,13 @@ function botaoAlterarSalvar(){
                             </div>
                             <div>
                                 <h2>
-                                cep
+                                Cep
                                 </h2>
                                 <input type="text"value={cep} onChange={e => setCep(e.target.value)}/>
                             </div>
                             <div >
                                 <h2>
-                                endereço
+                                Endereço
                                 </h2>
                                 <input type="text" value={endereco} onChange={e => setEndereco(e.target.value)} />
                             </div>
@@ -110,19 +149,19 @@ function botaoAlterarSalvar(){
                         <div>
                             <div>
                                 <h2>
-                                data de nascimento
+                                Data de Nascimento
                                 </h2>
                                 <input type="date" value={dtNascimento} onChange={e => setDtNascimento(e.target.value)}/>
                             </div>
                             <div >
                             <h2>
-                                telefone
+                                Telefone
                             </h2>
                             <input type="text" value={telefone} onChange={e => setTelefone(e.target.value)}/>
                         </div>
                         <div >
                             <h2>
-                                consulta
+                                Data da Consulta
                             </h2>
                             <input type="date" value={consulata} onChange={e => setConsulta(e.target.value)}/>
                         </div>
@@ -144,17 +183,17 @@ function botaoAlterarSalvar(){
                             <textarea  className='c1' value={anamnese} onChange={e => setAnamnese(e.target.value)}></textarea>
                    </div>
                    <div >
-                            <h2>hipotese </h2>
+                            <h2>Hipótese </h2>
                             <textarea  className='c1' value={hipotese} onChange={e => setHipotese(e.target.value)}></textarea>
                    </div>
    </div>
 
    <div class="formulario3" >
-    <h1>Trata mentos e remedios</h1>
+    <h1>Tratamentos e Medicamentos</h1>
     <div>
                 <div >
                     <div>
-                    <label for="input">Teve tratamentos anteriores</label>
+                    <label for="input">Realizou Tratamentos Anteriores</label>
                     <input  type="checkbox" checked={temtratant} onChange={e => setTemtratant(e.target.checked)}/>
                     </div>
                     <div>
@@ -195,9 +234,9 @@ function botaoAlterarSalvar(){
    </div> 
    <div className='x2'>
        <button onClick={botaoCadastrar}> 
-           Cadrastar Prontuario
+        {id === 0 ? 'Cadrastar Prontuario' : 'Alterar Prontuário'}
        </button> &nbsp;  &nbsp;
-       <button onClick={botaoAlterarSalvar}> {id === 0 ? 'SALVAR' : 'ALTERAR'} </button> &nbsp;  &nbsp;
+       <button onClick={botaoAlterarSalvar}> Novo </button> &nbsp;  &nbsp;
        
        </div>
      

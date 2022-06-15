@@ -1,4 +1,7 @@
 .page-menu{
+    background-color: #eeeeee;
+    min-height: 100vh;
+    padding: 2em;
 
      .button{
          padding: 10px 10px;
@@ -10,17 +13,15 @@
         font-size: 15px;
      }
      .c2{
-        margin-top: 2em;
-       margin-left: 3px;
-         
+                 
      }
      .button:hover{
-        padding: 12px 12px;
         background-color: #8740f8;
      }
     .c1{
         display: flex;
         flex-direction: column;
+
     }
     
     main{
@@ -40,13 +41,13 @@
         align-items: center;
         background-color: #C7A5FE;
         border-radius: 20px;
-        transition:  background-color 1s;
+        transition:  .3s;
         
     }
     
     .sc1:hover{
         background-color: #4b10aa;
-        padding: 5px 5px;
+        transform: scale(1.05);
     }
     
     .img{

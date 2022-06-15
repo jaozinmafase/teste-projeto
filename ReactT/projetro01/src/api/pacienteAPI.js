@@ -23,7 +23,7 @@ queixaprincipal, outrasqueixas, anamnese, hipotese,temtratant,usamedicamentos, t
             temtratant: temtratant,                                
             usamedicamentos: usamedicamentos,
             trat_ant:trat_ant,                                      
-            ds_medic_utili: medicamentos,
+            medicamentos: medicamentos,
             diagnostico: diagnostico,                       
             metasalcancadas:metasalcancadas,
             sessoesrealizadas:sessoesrealizadas,                   
@@ -38,7 +38,7 @@ queixaprincipal, outrasqueixas, anamnese, hipotese,temtratant,usamedicamentos, t
     export async function alterarProntuario(id,nome,datanascimento, cep,endereco,telefone,consulta, 
         queixaprincipal, outrasqueixas, anamnese, hipotese,temtratant,usamedicamentos, trat_ant,medicamentos,
             diagnostico,metasalcancadas,sessoesrealizadas, proximassessoes,usuario) {
-                const resposta = await api.post(`/prontuario/${id}`,{
+                const resposta = await api.put(`/prontuario/paciente/${id}`,{
                     nome : nome,                                 
                     datanascimento : datanascimento,
                     cep: cep,                                 
@@ -52,7 +52,7 @@ queixaprincipal, outrasqueixas, anamnese, hipotese,temtratant,usamedicamentos, t
                     temtratant: temtratant,                                
                     usamedicamentos: usamedicamentos,
                     trat_ant:trat_ant,                                      
-                    ds_medic_utili: medicamentos,
+                    medicamentos: medicamentos,
                     diagnostico: diagnostico,                       
                     metasalcancadas:metasalcancadas,
                     sessoesrealizadas:sessoesrealizadas,                   
@@ -73,6 +73,11 @@ queixaprincipal, outrasqueixas, anamnese, hipotese,temtratant,usamedicamentos, t
         }
 
     export async function excluirPaciente(id){
-        const r = await api.delete(`/pacientes/${id}`)
+        const r = await api.delete(`/prontuario/paciente/${id}`)
         return r.status;
         }
+
+    export async function listarId(id){
+        const r = await api.get(`/paciente/numero?id=${id}`)
+        return r.data;
+    }
