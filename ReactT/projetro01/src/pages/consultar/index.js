@@ -62,13 +62,13 @@ export default function Index(){
 
          <div className='bca'>
                    <button className='b1'>
-                       <Link className='c' to="/menu">voltar</Link>
+                       <Link className='c' to="/menu">Voltar</Link>
                    </button>
                </div>
 
            <div className='main'>
                
-               <h1>Consultar um Prontuario</h1>
+               <h1>Consultar um Prontuário</h1>
                <div className='cx'>
                    
                     <div> <input type="text"  className='search-txt' placeholder='consultar' value={filtro} onChange={e => setFiltro(e.target.value)}/> 
@@ -85,11 +85,11 @@ export default function Index(){
                 <div>{item.id}</div>
                <div><button className='btnome'>{item.nome}</button></div>
                <div className='c2'>
-                   <button className='btnome' onClick={() => alterarPacienteClick(item.id)}>editar</button>
+                   <button className='btnome' onClick={() => alterarPacienteClick(item.id)}>Editar</button>
                  </div>
 
                <div className='c2'> 
-                   <button className='btnome' onClick={() => excluirPacienteClick(item.id,item.nome)} >remover</button>
+                   <button className='btnome' onClick={() => excluirPacienteClick(item.id,item.nome)} >Remover</button>
               </div> 
               </div>
                 )}

@@ -113,7 +113,7 @@ function botaoAlterarSalvar(){
     return(
        <main className='page-cadrastro' >
                <div className='c2'>
-            <Link className='button' to="/menu">voltar</Link>
+            <Link className='button' to="/menu">Voltar</Link>
         </div>
 
 
@@ -121,7 +121,7 @@ function botaoAlterarSalvar(){
     
      
       <div className='cabecalho'>
-       <h3 className='titulo'>Cadastrar um Prontuario</h3>
+       <h3 className='titulo'>Cadastrar um Prontuário</h3>
       </div>
     
     
@@ -171,11 +171,11 @@ function botaoAlterarSalvar(){
 
     <div className='formulario2'>
                         <div >
-                            <h2>Queixa principal </h2>
+                            <h2>Queixa Principal </h2>
                             <textarea  className='c1' value={queixaprincipal} onChange={e => setQueixaPrincipal(e.target.value)}> </textarea>
                         </div>
                         <div  >
-                            <h2>Queixa secundaria </h2>
+                            <h2>Queixa Secundária </h2>
                             <textarea  className='c1' value={outrasqueixas} onChange={e => setOutrasQueixas(e.target.value)}></textarea>
                         </div>
                         <div >
@@ -197,34 +197,34 @@ function botaoAlterarSalvar(){
                     <input  type="checkbox" checked={temtratant} onChange={e => setTemtratant(e.target.checked)}/>
                     </div>
                     <div>
-                    <label for="input">Não usa medicamentos</label>
+                    <label for="input">Não Usa Medicamentos</label>
                     <input type="checkbox" checked={usamedicamentos} onChange={e => setUsamedicamentos(e.target.checked)}/>
                 </div>
 
                 <div  >
-                    <h2>Tratamentos anteriores </h2>
+                    <h2>Tratamentos Anteriores </h2>
                     <textarea   className='c1' type="text" value={trat_ant} onChange={e => setTratant(e.target.value)}></textarea>
                    
                 </div>
                 <div >
-                    <h2>Medicamentos utilizados </h2>
+                    <h2>Medicamentos Utilizados </h2>
                     <textarea  className='c1' type="text" value={medicamentosUtilizados} onChange={e => setMedicamentosUtilizados(e.target.value)}></textarea>
                 </div>
                 <div > 
-                    <h2>Diagnosticos </h2>
+                    <h2>Diagnósticos </h2>
                     <textarea   className='c1' type="text" value={diagnostico} onChange={e => setDiagnostico(e.target.value)}></textarea>
                 </div>    
                 <div  >
-                    <h2>metas desejadas </h2>
+                    <h2>Metas Desejadas </h2>
                     <textarea  className='c1' type="text" value={metasalcancadas} onChange={e => setmetasalcacandas(e.target.value)}></textarea>
                 </div>  
                 
                 <div >
-                    <h2>sessões  realizadas</h2>
+                    <h2>Sessões Realizadas</h2>
                     <textarea   className='c1' value={sessoesrealizadas} onChange={e => setSessoesrealizadas(e.target.value)}></textarea>
                 </div>  
                 <div>
-                    <h2> proximas sessões  </h2>
+                    <h2> Próximas Sessões  </h2>
                     <textarea  className='c1' value={proximassessoes} onChange={e => setProximassessoes(e.target.value)}></textarea>
 
               </div>
