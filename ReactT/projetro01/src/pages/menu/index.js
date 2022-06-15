@@ -27,7 +27,7 @@ export default function Index(){
        <main className='page-menu' >
             <div onClick={sairClick} className='c2'>
           
-          <Link className='button' to="/login">SAIR</Link>
+          <Link className='button' to="/login">Sair</Link>
      
         </div>
 

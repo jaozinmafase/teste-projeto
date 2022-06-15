@@ -15,6 +15,7 @@
     .cx{
         display:flex;
         flex-direction: row;
+        margin-top: 2em;
     }
     h1{
         font-size: 50px;
@@ -51,7 +52,8 @@
     .c{
         text-decoration: none;
         color: white;
-        font-family:monospace;
+        font-family: 'discord5';
+        font-size: 15px;
     }
     .btnome{
         padding: 12px 12px;

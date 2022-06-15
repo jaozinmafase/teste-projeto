@@ -19,7 +19,7 @@ export default function Index(){
         
          <div >
            <button className='b1'>
-           <Link to="/login"> Area Administrativa </Link>
+           <Link to="/login"> Área Administrativa </Link>
 
            </button>
          </div>
@@ -67,7 +67,7 @@ export default function Index(){
       </div>
     </div>
 
-    <div className='sub5'>
+    <div className='v1'>
       <div>
         <h1>A Importancia de ter </h1>
         <h1>um  Psicologo</h1>
